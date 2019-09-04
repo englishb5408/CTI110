@@ -1,0 +1,37 @@
+# CTI-110
+# P3HW1 - Month number
+# Brendan English
+# 8/30/2019
+#
+
+# Have the user enter the months number
+month = int(input('What is the months number? '))
+
+# Calculate and display the months name using the number given.
+if month == 1:
+    print('The first month of the year is January.')
+if month == 2:
+    print('The second month of the year is February.')
+if month == 3:
+    print('The third month of the year is March.')
+if month == 4:
+    print('The fourth month of the year is April.')
+if month == 5:
+    print('The fifth month of the year is May.')
+if month == 6:
+    print('The sixth month of the year is June.')
+if month == 7:
+    print('The seventh month of the year is July.')
+if month == 8:
+    print('The eighth month of the year is August.')
+if month == 9:
+    print('The ninth month of the year is September.')
+if month == 10:
+    print('The tenth month of the year is October.')
+if month == 11:
+    print('The eleventh month of the year is November.')
+if month == 12:
+    print('The twelfth month of the year is December.')
+
+# If they enter a number out of the range 1-12, display an error message.
+else: print('Sorry that is not a valid option.')
