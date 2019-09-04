@@ -1,0 +1,51 @@
+# Create a graphic image with a turtle using python
+# 8/28/2019
+# CTI-110 P2HW2 - Turtle Graphic
+# Brendan English
+
+# Import trutle to load the turtle module
+import turtle
+
+# Pull up the turtle window
+turtle.showturtle()
+
+# Begin filling first square in white
+turtle.fillcolor('white')
+turtle.begin_fill()
+
+# Turn the turtle 45 degrees to the left and move it forward 200 pixels
+turtle.left(45)
+turtle.forward(200)
+
+# Turn 90 degrees right and move 200 pixels forward
+turtle.right(90)
+turtle.forward(200)
+
+# Repeat untill first square is finished
+turtle.right(90)
+turtle.forward(200)
+turtle.right(90)
+turtle.forward(200)
+
+# End fill for first square
+turtle.end_fill()
+
+# Begin filling the second square in white
+turtle.fillcolor('white')
+turtle.begin_fill()
+
+# Move 200 pixels forward to start the next square
+turtle.forward(200)
+
+# Turn 90 degrees left and move forward 200 pixels
+turtle.left(90)
+turtle.forward(200)
+
+# Repeat untill second square is finished
+turtle.left(90)
+turtle.forward(200)
+turtle.left(90)
+turtle.forward(200)
+
+# End fill for second square
+turtle.end_fill()
