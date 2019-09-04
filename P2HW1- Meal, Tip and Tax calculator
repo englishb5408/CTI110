@@ -1,0 +1,26 @@
+# Calculate the tip and tax then display the total cost of a meal.
+# 8/26/2019
+# CTI-110 P2HW1 - Meal Tip Tax Calculator
+# Brendan English
+#
+
+# Enter the cost of the food.
+charge = float(input('Enter the cost of the food. '))
+
+# Enter the tip for the server
+tip_amount = float(input('Enter the tip amount for the server. '))
+
+# Enter the tax amount
+tax_amount = float(input('Enter the tax amount for the food. '))
+
+# Calculate the tip and tax cost
+tip = tip_amount * charge
+tax = tax_amount * charge
+
+# Calculate the total cost of the meal
+total_cost = charge + tip + tax
+
+#Display the calculated tip, tax, and total cost of the meal
+print('The calculated tip is $', format(tip, ',.2f'))
+print('The calculated tax is $', format(tax, ',.2f'))
+print('The total cost of the meal is $', format(total_cost, ',.2f'))
