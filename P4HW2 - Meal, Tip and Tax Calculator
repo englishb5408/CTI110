@@ -1,0 +1,37 @@
+# CTI-110
+# P3HW2 - MealTipTax
+# Brendan English
+# 9/1/2019
+#
+
+# Enter the cost of the food.
+loop = 'y'
+
+# Define the function for the math and print part of the program
+def func():             
+        tax = charge * .06                                          # Calculate tax amount
+        tip = charge * tip_amount                                   # Calculate the tax
+        total_cost = charge + tip_amount + tax                      # Calculate total cost
+        print('The original cost of the meal is $ ', format(charge, ',.2f'))    # Display original cost
+        print('The calculated tip is $', format(tip, ',.2f'))   # Display calculated tip
+        print('The calculated tax is $', format(tax, ',.2f'))   # Display the calculated tax
+        print('The total cost of the meal is $', format(total_cost, ',.2f'))    # Display the total cost of the meal
+
+# Start the loop off as yes        
+while loop == 'y':                                                                                      
+        charge = float(input('Enter the cost of the food: '))                                           # Enter the charge of food
+        tip_amount = float(input('Enter the tip percentage (.16, .18, or .20) for the server: '))       # Enter the tip amount
+        if tip_amount == .16 or tip_amount == .18 or tip_amount == .20:                                 # If the tip amount is correct call the math function
+                func()                                                                                  # Call the function
+                loop = input('Do you want to calculate another tip? (enter y for yes, n for no): ')     # Ask if they want to calculate again
+        else:                                                                                           # If not correct run the following loop again
+                print('That is an invalid number, please enter the tip percentage (.16,.18 or .20) for the server')
+                charge = float(input('Enter the cost of the food: '))
+                tip_amount = float(input('Enter the tip percentage (.16, .18, or .20) for the server: '))
+                if tip_amount == .16 or tip_amount == .18 or tip_amount == .20:
+                        func()
+                loop = input('Do you want to calculate another tip? (enter y for yes, n for no): ')
+
+# If they decide to not calculate another tip, end the program
+while loop == 'n':              
+        exit()
