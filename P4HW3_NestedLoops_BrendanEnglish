@@ -10,7 +10,7 @@ t = turtle.Turtle()
 t.shape('turtle')
 t.speed(1000000)
 
-# Set the base length of the first side as 10
+# Set the base length of the first side as 5
 length = 5
 
 # Move 5 pixels, turn left, then increase the length by 5 and repeat
