@@ -1,0 +1,54 @@
+# CTI-110
+# P4HW1 - Expenses
+# Brendan English
+# 9/30/2019
+#
+# User inputs amount in account
+# User inputs their expenses and their amounts
+# Program calculates the new amount in the account by subtracting the expenses
+# Program prints the original amount, the expenses, and the amount in account after subtracting
+#
+
+# Set original loop as y
+loop = 'y'
+
+# Define function to print all the output 
+def func():
+    print('Amount in account before expense subtraction: $', format(account, ',.2f'))
+    print('-------------------------')
+    print('Expense Calculator'.center(25, ' '))
+    print('-------------------------|')
+    print('Expense', '\tAmount')
+    print('=========================')
+    print(' ', title, '\t\t$',format(amount, ',.2f'))       # Print expense and amount
+    if add == 'y':      # If they added another expense then print that as well
+        print(' ', title2, '\t\t$',format(amount2, ',.2f'))
+    print('-------------------------')
+    math()      # Call the math function 
+
+# Define function to calculate the new amount  
+def math():
+    if add == 'y':      # If they added another expense, calculate amount subtracting both
+        twoexpense = amount + amount2
+        accountnew = account - twoexpense
+        print('Amount in account AFTER expense subtraction: $', format(accountnew, ',.2f'))
+    else:       # If no other expense was added, calculate new amount
+        accountnew = account - amount
+        print('Amount in account AFTER expense subtraction: $', format(accountnew, ',.2f'))
+
+# While the loop is set, have user input original amount and all expenses       
+while loop == 'y':
+    account = float(input('Enter the amount in account you are withdrawing from: '))
+    title = input('What is the title of the first expense? ')
+    amount = float(input('What is the amount you are withdrawing? '))
+    add = input('Would you like to calculate another expense? (y/n) ')
+    if add == 'y':      # If y is entered they can add another expense
+        title2 = input('What is the title of the next expense? ')
+        amount2 = float(input('What is the amount you are withdrawing? '))
+        loop = 'n'      # loop is set to n so it doesnt repeat
+        func()      # Print function is called to display ouput
+    else:       # If y is not entered, the function is called to display output and loop is set to n
+        func()
+        loop = 'n'
+
+
