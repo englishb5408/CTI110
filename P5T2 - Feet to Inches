@@ -1,0 +1,19 @@
+# Calculate the amount of inches in a certain amount of feet 
+# 10/14/2019
+# CTI-110 P5T2_FeetToInches
+# Brendan English
+#
+# User inputs amount of feet
+# Program uses feet_to_inches to calculate the amount of inches
+# Program displays output of how many inches in X feet
+
+INCHES_PER_FOOT = 12        # Define amount of inches per foot 
+
+def main():
+    feet = int(input('Enter a number of feet: '))       # Collect number of feet
+    print(feet, 'feet equals', feet_to_inches(feet), 'inches')      # Print output
+
+def feet_to_inches(feet):
+    return feet * INCHES_PER_FOOT       # Multiply number of feet by 12
+
+main()      # Call main function 
