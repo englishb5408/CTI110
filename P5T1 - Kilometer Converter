@@ -1,0 +1,17 @@
+# Calculate program that converts kilometers to miles
+# 10/14/2019
+# CTI-110 P5T1_KilometerConverter
+# Brendan English
+#
+# Have user input distance in kilometers
+# Program calculates distance and converts to miles
+# Output is displayed in miles
+
+# Define main function 
+def main():
+    kilometers = float(input('Enter the distance in kilometers: '))      # Have user enter distance in kilometers
+    miles = kilometers * 0.6214     # Calculate miles 
+    print(kilometers, 'kilometers equals', miles, 'miles.')     # Print the output of miles
+
+    
+main()
